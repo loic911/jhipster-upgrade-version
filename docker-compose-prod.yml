@@ -1,6 +1,6 @@
 jhipster-prod-elasticsearch:
   container_name: UpgradeCheck-prod-elasticsearch
-  image: elasticsearch
+  image: elasticsearch:1.7.3
   # volumes:
   # - ~/volumes/jhipster/UpgradeCheck/prod-elasticsearch/:/usr/share/elasticsearch/data/
   ports:
@@ -8,7 +8,7 @@ jhipster-prod-elasticsearch:
   - "9300:9300"
 jhipster-prod-postgresql:
   container_name: UpgradeCheck-prod-postgresql
-  image: postgres
+  image: postgres:9.4.5
   # volumes:
   # - ~/volumes/jhipster/UpgradeCheck/prod-postgresql/:/var/lib/postgresql/
   environment:
