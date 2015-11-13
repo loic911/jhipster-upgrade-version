@@ -1,0 +1,20 @@
+{
+    "upgradeCheckApp": {
+        "myUpgradeDomain" : {
+            "home": {
+                "title": "MyUpgradeDomains",
+                "createLabel": "Créer un nouveau MyUpgradeDomain",
+                "createOrEditLabel": "Créer ou éditer un MyUpgradeDomain"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le MyUpgradeDomain {{ id }} ?"
+            },
+            "detail": {
+                "title": "MyUpgradeDomain"
+            },
+            "name": "Name",
+            "myDate": "MyDate"
+        }
+    }
+}
+

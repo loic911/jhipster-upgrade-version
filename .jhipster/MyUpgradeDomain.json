@@ -1,0 +1,21 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "myDate",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "changelogDate": "20151113090910",
+    "dto": "no",
+    "pagination": "pagination"
+}
