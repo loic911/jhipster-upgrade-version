@@ -1,7 +1,8 @@
 'use strict';
 
 angular.module('upgradeCheckApp')
-    .controller('MyUpgradeDomainController', function ($scope, MyUpgradeDomain, MyUpgradeDomainSearch, ParseLinks) {
+    .controller('MyUpgradeDomainController', function ($scope, $state, $modal, MyUpgradeDomain, MyUpgradeDomainSearch, ParseLinks) {
+      
         $scope.myUpgradeDomains = [];
         $scope.page = 0;
         $scope.loadAll = function() {
@@ -16,21 +17,6 @@ angular.module('upgradeCheckApp')
         };
         $scope.loadAll();
 
-        $scope.delete = function (id) {
-            MyUpgradeDomain.get({id: id}, function(result) {
-                $scope.myUpgradeDomain = result;
-                $('#deleteMyUpgradeDomainConfirmation').modal('show');
-            });
-        };
-
-        $scope.confirmDelete = function (id) {
-            MyUpgradeDomain.delete({id: id},
-                function () {
-                    $scope.loadAll();
-                    $('#deleteMyUpgradeDomainConfirmation').modal('hide');
-                    $scope.clear();
-                });
-        };
 
         $scope.search = function () {
             MyUpgradeDomainSearch.query({query: $scope.searchQuery}, function(result) {

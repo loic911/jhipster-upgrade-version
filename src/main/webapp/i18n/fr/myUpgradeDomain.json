@@ -6,6 +6,9 @@
                 "createLabel": "Créer un nouveau MyUpgradeDomain",
                 "createOrEditLabel": "Créer ou éditer un MyUpgradeDomain"
             },
+            "created": "Un nouveau MyUpgradeDomain a été créé avec l'identifiant {{ param }}",
+            "updated": "Le MyUpgradeDomain avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le MyUpgradeDomain avec l'identifiant {{ param }} a été supprimé",
             "delete": {
                 "question": "Etes-vous certain de vouloir supprimer le MyUpgradeDomain {{ id }} ?"
             },

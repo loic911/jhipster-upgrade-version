@@ -96,5 +96,28 @@ angular.module('upgradeCheckApp')
                         $state.go('^');
                     })
                 }]
+            })
+            .state('myUpgradeDomain.delete', {
+                parent: 'myUpgradeDomain',
+                url: '/{id}/delete',
+                data: {
+                    authorities: ['ROLE_USER'],
+                },
+                onEnter: ['$stateParams', '$state', '$modal', function($stateParams, $state, $modal) {
+                    $modal.open({
+                        templateUrl: 'scripts/app/entities/myUpgradeDomain/myUpgradeDomain-delete-dialog.html',
+                        controller: 'MyUpgradeDomainDeleteController',
+                        size: 'md',
+                        resolve: {
+                            entity: ['MyUpgradeDomain', function(MyUpgradeDomain) {
+                                return MyUpgradeDomain.get({id : $stateParams.id});
+                            }]
+                        }
+                    }).result.then(function(result) {
+                        $state.go('myUpgradeDomain', null, { reload: true });
+                    }, function() {
+                        $state.go('^');
+                    })
+                }]
             });
     });
